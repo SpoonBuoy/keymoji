@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Keymoji",
+  "version": "1.0",
+  "permissions": [
+    "storage"
+  ],
+  "description": "Map emojis to keys/words",
+  
+ "content_scripts": [ {
+  "matches": ["<all_urls>"],
+  "js": ["scripts/content.js"]
+} ],
+
+  "action": {
+    "default_popup": "popup.html"
+  }
+  
+}

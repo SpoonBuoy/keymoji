@@ -1,0 +1,210 @@
+body {
+  font-family: Arial, sans-serif;
+  
+  margin: 0;
+  padding: 20px;
+  width: 400px;
+  height: 700px;
+  border-radius: 10px;
+}
+
+#searchInputBox {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#mappingInput{
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  box-sizing: border-box;
+  text-align: center;
+
+}
+
+#addButton{
+  width: 40%;
+  height: 80%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #66BB6A;
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#addButton:hover {
+    background-color: #4CAF50; /* Slightly darker shade on hover */
+}
+
+.deleteMapping {
+    height: 60%;
+    background-color: #E57373;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.deleteMapping:hover {
+    background-color: #F44336; /* Slightly darker shade on hover */
+}
+
+#goBack{
+    width : 100%;
+    height: 50px;
+    font-size: large;
+    background-color: #68b5eb;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#goBack:hover {
+    background-color: #2b5b7e;/* Slightly darker shade on hover */
+}
+
+#textList{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#emojiList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.headerList{
+    margin-top: 20px;
+}
+#mappingList .listItems, .headerList{
+  text-align: center;
+  display: grid;
+  grid-template-columns: 60px 255px 60px; 
+  grid-template-rows: minmax(50px, auto);
+  grid-gap: 10px;
+  font-size: 20px;
+}
+.value{
+    box-sizing: border-box;
+    font-size: 30px;
+}
+.key{
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+}
+.noMappingMessage{
+    font-size: 20px;
+    padding: 20px;
+    width : 100%;
+    text-align: center;
+    color: brown;
+    font-weight: 600;
+}
+
+.emoji{
+    box-sizing: border-box;
+    font-size: 50px;
+    transition: transform 0.3s ease-in-out;
+    display: inline-block;
+    cursor: pointer;
+}
+.emoji:hover{
+    transform: scale(1.4) ;
+}
+.text{
+    box-sizing: border-box;
+    font-size: 100px;
+    
+    
+    animation: scaleAnimation 2s infinite alternate;
+    text-align: center;
+}
+
+.hide{
+    display: none;
+}
+
+#navBar{
+  
+  
+  margin:0;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 80px 200px 80px;
+  grid-gap: 10px;
+  z-index: 1000; /* Make sure the navbar is on top */
+  padding: 10px 0;
+  box-sizing: border-box;
+  font-size: 12px;
+  
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #3498db;
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #3498db;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+#logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: #3498db; /* Your logo color */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.3);
+  }
+}

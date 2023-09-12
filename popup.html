@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Emoji List with Search</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="navBar">
+    <div id="connect">
+        <a> Connect </a>
+    </div>
+    <div id="logo">
+        Keymoji
+    </div>
+    <div id="viewMappings">
+        <a>View Mappings</a>
+    </div>
+  </div>
+  <div id="searchInput">
+    <input type="text" id="searchInputBox" placeholder="Search Emojis">
+  </div>
+
+  <div id="emojiList">
+    
+  </div>
+
+  <div id="textList">
+    <input type="text" id="mappingInput" placeholder="Write Mapping for ">
+    <button id = "addButton">Add Mapping</button>
+  </div>
+
+  <div id ="mappingList">
+    <button id = "goBack"> Add Another Mapping </button>
+    <div class="headerList">
+         <div> Emoji </div>
+        <div> Mapping </div>
+        <div> Action </div>
+    </div>
+   
+  </div>
+  <script type="module" src="dist/bundle.js"></script>
+  
+</body>
+</html>
+
